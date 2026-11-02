@@ -1,0 +1,64 @@
+body {
+    background: #43068F url("https://static.vecteezy.com/system/resources/previews/039/673/187/non_2x/square-seamless-background-with-night-sky-and-stars-for-printing-on-textiles-cards-and-wallpaper-vector.jpg") repeat center center fixed;
+    background-size: 400px;
+    padding: 70px;
+}
+
+.top-zone {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+}
+
+.env-item {
+    font-size: 28px;
+    color: #fff;
+}
+
+.main-zone {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.scene {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    margin-top: 20px;
+}
+
+h1,
+h2,
+h3 {
+    color: #43068F;
+    font-family: sans-serif;
+}
+
+p {
+    color: white;
+    font-size: 24px;
+}
+
+#planet {
+    width: 130px;
+    height: auto;
+    border-radius: 8px;
+}
+
+#alien {
+    width: 200px;
+    height: auto;
+}
+
+#spaceship {
+    width: 160px;
+    height: auto;
+    border-radius: 8px;
+}

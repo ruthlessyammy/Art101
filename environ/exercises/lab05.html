@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Environment 02 - Space Alien</title>
+    <link href="lab05.css" rel="stylesheet" type="text/css">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <div class="top-zone">
+        <span class="env-item">🌙</span>
+        <span class="env-item">🪐</span>
+        <span class="env-item">⭐</span>
+    </div>
+
+    <div class="main-zone">
+        <h1>Welcome to my space world!</h1>
+        
+        <div class="scene">
+            <img id="alien" src="https://media.tenor.com/p5NLTp0CLAIAAAAe/alien-cute-alien.png" alt="Cute Alien Character">
+        </div>
+
+        <div style="margin-top: 20px;">
+            <button id="pat-btn">Squish the Alien!! DOO IT</button>
+        </div>
+
+        <p id="alien-message">Click the button to squish your alien!</p>
+    </div>
+    <script>
+        function alienReaction(mood) {
+            if (mood === "happy") {
+                $("#alien-message").html("*The alien rubs its spherical moist head against the palm of your hand and starts glowing yellow!*");
+                $("#alien").css("transform", "scale(1.15)");
+                setTimeout(function() {
+                    $("#alien").css("transform", "scale(1)");
+                }, 200);
+            } else if (mood === "surprised") {
+                $("#alien-message").html("The aliens eyes widen with surprise at what youve just done... It is not sure how to proceed.*");
+                $("#alien").css("transform", "rotate(8deg)");
+                setTimeout(function() {
+                    $("#alien").css("transform", "rotate(0deg)");
+                }, 200);
+            } else {
+                $("#alien-message").html(" The aliens eyes narrow with irritation, it decided to aabduct you.");
+            }
+        }
+
+        let clickCounter = 0;
+
+        $("#pat-btn").click(function () {
+            clickCounter++;
+            if (clickCounter % 2 === 1) {
+                alienReaction("happy");
+            } else {
+                alienReaction("surprised");
+            }
+        });
+    </script>
+</body>
+</html>
